@@ -1,3 +1,5 @@
+*.html
+.idea/
 leanproofs*
 # macOS
 .DS_Store
