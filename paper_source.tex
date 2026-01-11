@@ -100,6 +100,14 @@ For $h_1, h_2 \in \B^6$, the \emph{Hamming distance} is
 \]
 \end{definition}
 
+\begin{definition}[Total Hamming Cost of a Matching]
+For a perfect matching $M$ on $\B^6$ (a partition into 32 disjoint pairs), the \emph{total Hamming cost} is the sum of Hamming distances over all pairs:
+\[
+\mathrm{Cost}(M) = \sum_{\{h_1, h_2\} \in M} \Ham(h_1, h_2)
+\]
+This measures how ``different'' the paired elements are overall.
+\end{definition}
+
 \subsection{The Klein Four-Group Action}
 
 \begin{definition}[Complement and Reversal]
@@ -318,6 +326,15 @@ All results are machine-checked in Lean~4 using the Mathlib library:
     \item Constructive proof that the reverse-priority function is an involution
     \item Proof of optimality via case analysis on orbit structure
 \end{itemize}
+
+\subsection{Subgroup Matchings}
+
+One may ask whether the theorem holds for subgroups of $K_4$:
+\begin{itemize}
+    \item \textbf{Complement-only} ($\langle \comp \rangle$): Valid perfect matching with cost 192, trivially unique since each hexagram has exactly one complement.
+    \item \textbf{Reversal-only} ($\langle \rev \rangle$): \emph{Not} a valid perfect matching. The 8 palindromes satisfy $\rev(h) = h$, so they cannot pair with their own reversal. A perfect matching requires pairing with a \emph{different} element.
+\end{itemize}
+Thus the reverse-priority rule is the minimal hybrid that produces a valid matching: use $\rev$ whenever possible, fall back to $\comp$ for the 8 palindromes.
 
 \subsection{Extensions}
 
