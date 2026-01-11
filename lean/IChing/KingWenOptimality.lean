@@ -5,18 +5,22 @@ import IChing.Symmetry
 # King Wen Optimality
 
 The reverse-priority rule: pair with rev(h) unless h is a palindrome,
-then pair with comp(h). This is optimal and unique.
+then pair with comp(h). This is optimal and unique among comp/rev matchings.
+
+Note: This file proves optimality among matchings using only comp or rev pairings.
+The third equivariant option (comp ∘ rev pairing) can achieve lower total cost (96 vs 120)
+on orbits where d(h, rev(h)) = 4, but King Wen follows the structurally simpler rule.
 
 ## Main definitions
 
-* `priorityPartner` : The optimal partner function
+* `priorityPartner` : The optimal partner function (among comp/rev matchings)
 * `SatisfiesReversePriority` : Matching follows the rule
 
 ## Main results
 
 * `priorityPartner_involutive` : partner(partner(h)) = h
-* `priorityPartner_minimizes_distance` : Achieves minimum Hamming cost
-* `reversePriority_unique` : The optimal matching is unique
+* `priorityPartner_minimizes_distance` : Achieves minimum Hamming cost vs complement
+* `reversePriority_unique` : The reverse-priority matching is unique
 * `reverse_eq_complement_of_hamming_six` : Key lemma for uniqueness
 -/
 
