@@ -1,7 +1,21 @@
 import IChing.Symmetry
 import Mathlib.Data.Fin.VecNotation
 
-/-! # The King Wen Sequence -/
+/-!
+# The King Wen Sequence
+
+The King Wen sequence orders the 64 hexagrams into 32 pairs.
+This encoding follows the traditional I Ching ordering.
+
+## Main definitions
+
+* `kingWenBinary` : The 64 hexagrams as integers
+* `kingWenPair` : The k-th consecutive pair
+
+## Main results
+
+* `kingWen_all_equivariant` : All pairs satisfy h₂ = comp(h₁) or h₂ = rev(h₁)
+-/
 
 namespace IChing
 

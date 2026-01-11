@@ -2,7 +2,25 @@ import Mathlib.Data.Fin.Basic
 import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Fintype.Pi
 
-/-! # Hexagrams as Binary Vectors -/
+/-!
+# Hexagrams as Binary Vectors
+
+A hexagram is an element of {0,1}⁶, representing a 6-bit binary string.
+
+## Main definitions
+
+* `Hexagram` : The type `Fin 6 → Fin 2` (64 elements)
+* `complement` : Bitwise complement (flips all bits)
+* `reverse` : Bit reversal (index i ↦ index 5-i)
+* `hammingDist` : Hamming distance between hexagrams
+
+## Main results
+
+* `complement_involutive` : comp(comp(h)) = h
+* `reverse_involutive` : rev(rev(h)) = h
+* `hammingDist_complement` : d(h, comp(h)) = 6
+* `palindrome_count` : Exactly 8 hexagrams satisfy h = rev(h)
+-/
 
 namespace IChing
 

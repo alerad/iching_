@@ -1,7 +1,24 @@
 import IChing.KingWen
 import IChing.Symmetry
 
-/-! # King Wen Optimality -/
+/-!
+# King Wen Optimality
+
+The reverse-priority rule: pair with rev(h) unless h is a palindrome,
+then pair with comp(h). This is optimal and unique.
+
+## Main definitions
+
+* `priorityPartner` : The optimal partner function
+* `SatisfiesReversePriority` : Matching follows the rule
+
+## Main results
+
+* `priorityPartner_involutive` : partner(partner(h)) = h
+* `priorityPartner_minimizes_distance` : Achieves minimum Hamming cost
+* `reversePriority_unique` : The optimal matching is unique
+* `reverse_eq_complement_of_hamming_six` : Key lemma for uniqueness
+-/
 
 namespace IChing
 

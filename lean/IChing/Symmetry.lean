@@ -1,7 +1,22 @@
 import IChing.Hexagram
 import Mathlib.GroupTheory.GroupAction.Basic
 
-/-! # Klein Four-Group Action on Hexagrams -/
+/-!
+# Klein Four-Group Action on Hexagrams
+
+The Klein four-group K₄ = {e, c, r, cr} acts on hexagrams, where c = complement
+and r = reverse. These operations commute and are self-inverse.
+
+## Main definitions
+
+* `KleinAction` : The four group elements
+* `orbit` : The K₄-orbit of a hexagram
+
+## Main results
+
+* `complement_reverse_comm` : comp ∘ rev = rev ∘ comp
+* `orbit_size_two_or_four` : All orbits have size 2 or 4
+-/
 
 namespace IChing
 
