@@ -1,0 +1,14 @@
+*.html
+.idea/
+leanproofs*
+# macOS
+.DS_Store
+
+# Lean
+.lake/
+lean/IChing/experimental
+# LaTeX
+*.aux
+*.log
+*.out
+*.synctex.gz
