@@ -6,8 +6,6 @@
 
 The **I Ching** (Book of Changes) is one of China's oldest philosophical classics, dating back over 3,000 years. Its core idea is to understand the dialectical development of all things in the world through the opposition, unity, transformation, and dynamic balance of contradictions.
 
-![Astrolabe Visualization](images/astrolabe-visualization.jpg)
-
 ### Yin and Yang: The Basic Unit of Contradiction
 
 - **Yang ⚊** (solid line) and **Yin ⚋** (broken line) represent the two opposing aspects of things
@@ -164,6 +162,8 @@ lake build            # Build the project
 ## Visualization
 
 This project includes [Astrolabe](https://github.com/Xinze-Li-Bryan/Astrolabe) visualization data (in `.astrolabe/` directory). Open the project in Astrolabe to explore the dependency graph and mathematical annotations, visualizing the logical structure of the proofs.
+
+![Astrolabe Visualization](images/astrolabe-visualization.jpg)
 
 ## Future Directions: Deeper Dialectical Structures
 
